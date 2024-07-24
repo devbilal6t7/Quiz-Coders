@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_coder/screens/Splash%20Screen/splash_screen.dart';
-import 'package:quiz_coder/screens/onboarding.dart';
 
 void main() {
   runApp(const MyApp());

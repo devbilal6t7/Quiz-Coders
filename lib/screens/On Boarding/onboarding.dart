@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_coder/colors/colors.dart';
-import 'package:quiz_coder/screens/model.dart';
+import 'package:quiz_coder/screens/On%20Boarding/model.dart';
 
-import 'Start Screen/start_screen.dart';
+import '../Start Screen/start_screen.dart';
 
 
 class OnBoarding extends StatefulWidget {
