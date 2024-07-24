@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
       HomeScreen(userName: widget.userName),
       const NotesScreen(),
       const QuizScreen(),
-      const ChatBot(),
+      ChatBot(userName: widget.userName,),
     ];
   }
 
