@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:quiz_coder/screens/Chat%20Bot/chat_bot.dart';
-import 'package:quiz_coder/screens/DashBoard Screen/home_screen.dart';
+import 'package:quiz_coder/screens/DashBoard%20Screen/home_screen.dart';
 import 'package:quiz_coder/screens/Quiz%20Screen/quiz_screen.dart';
-import '../Notes Screen/notes_screen.dart';
+import '../Notes%20Screen/notes_screen.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key, required this.userName});
@@ -15,6 +16,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int currentIndex = 0;
   late List<Widget> screens;
+
   @override
   void initState() {
     super.initState();
@@ -29,30 +31,27 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: screens[currentIndex],
-      bottomNavigationBar: Container(
-          decoration: BoxDecoration(
-              color: const Color(0xFF00A6A6),
-              borderRadius: BorderRadius.circular(10)),
-          child: BottomNavigationBar(
-            selectedItemColor: const Color(0xFF00A6A6),
-            unselectedItemColor: const Color(0xFF00A6A6),
-            showUnselectedLabels: true,
-            showSelectedLabels: true,
-            currentIndex: currentIndex,
-            onTap: (index) {
-              setState(() {
-                currentIndex = index;
-              });
-            },
-            items: const [
-              BottomNavigationBarItem(icon: Icon(Icons.dashboard_customize_outlined), label: 'Dashboard'),
-              BottomNavigationBarItem(icon: Icon(Icons.note), label: 'Notes'),
-              BottomNavigationBarItem(icon: Icon(Icons.quiz), label: 'Quiz'),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.chat), label: 'Chat GPT'),
-            ],
-          )),
+      bottomNavigationBar: CurvedNavigationBar(
+        animationCurve: Curves.easeOut,
+        backgroundColor: Colors.transparent,
+        color:  const Color(0xFF6A5AE0),
+        buttonBackgroundColor: const Color(0xFF6A5AE0),
+        height: 60,
+        animationDuration: const Duration(milliseconds: 300),
+        items: const <Widget>[
+          Icon(Icons.dashboard_customize_outlined, size: 20, color: Colors.white),
+          Icon(Icons.note, size: 20, color: Colors.white),
+          Icon(Icons.quiz, size: 20, color: Colors.white),
+          Icon(Icons.chat, size: 20, color: Colors.white),
+        ],
+        onTap: (index) {
+          setState(() {
+            currentIndex = index;
+          });
+        },
+      ),
     );
   }
 }

@@ -42,18 +42,18 @@ class _ChatBotState extends State<ChatBot> {
       resizeToAvoidBottomInset: true,
       appBar:   AppBar(
         elevation: 0,
-        backgroundColor: const Color(0xFF00A6A6),
+        backgroundColor: const Color(0xFF6A5AE0),
       ),
       body: Container(
         decoration: const BoxDecoration(
-            gradient: LinearGradient(colors: [Color(0xFF00A6A6), Color(0xFF00A6A6)])),
+            gradient: LinearGradient(colors: [Color(0xFF6A5AE0),Color(0xFF6A5AE0), ])),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
 
             Center(
               child: Container(
-                color: const Color(0xFF00A6A6),
+                color: const Color(0xFF6A5AE0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -66,7 +66,7 @@ class _ChatBotState extends State<ChatBot> {
                     const CircleAvatar(
                       backgroundColor: Colors.white,
                       radius: 30,
-                      backgroundImage: AssetImage('assets/icons/boy.png'),
+                      backgroundImage: AssetImage('assets/icons/boys.png'),
                     )
                   ],
                 ),
@@ -111,7 +111,7 @@ class _ChatBotState extends State<ChatBot> {
                       style: ButtonStyle(
                           backgroundColor:  MaterialStateProperty.all(Colors.white),
                           foregroundColor:
-                              MaterialStateProperty.all(const Color(0xFF00A6A6)),
+                              MaterialStateProperty.all(const Color(0xFF6A5AE0)),
                           shape:
                               MaterialStateProperty.all(const CircleBorder())),
                       onPressed: () {

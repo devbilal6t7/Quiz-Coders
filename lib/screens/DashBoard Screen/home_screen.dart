@@ -8,10 +8,10 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF00A6A6),
+      backgroundColor:const Color(0xFF6700FA),
       appBar:   AppBar(
         elevation: 0,
-        backgroundColor: const Color(0xFF00A6A6),
+        backgroundColor: const Color(0xFF6700FA),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
   Widget buildAppBar(){
     return  Center(
       child: Container(
-        color: const Color(0xFF00A6A6),
+        color: const Color(0xFF6700FA),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -41,7 +41,7 @@ class HomeScreen extends StatelessWidget {
             const CircleAvatar(
               backgroundColor: Colors.white,
               radius: 30,
-              backgroundImage: AssetImage('assets/icons/boy.png'),
+              backgroundImage: AssetImage('assets/icons/boys.png'),
             )
           ],
         ),

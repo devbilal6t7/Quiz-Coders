@@ -29,8 +29,9 @@ class _StartScreenState extends State<StartScreen> {
         final deviceWidth = constraints.maxWidth;
         return Container(
           width: double.infinity,
+          height: double.infinity,
           decoration:   const BoxDecoration(
-            image: DecorationImage(image: AssetImage('assets/images/ob2.png'),fit: BoxFit.cover,opacity: 1),
+            image: DecorationImage(image: AssetImage('assets/images/ob3.png'),fit: BoxFit.fitWidth,opacity: 0.6),
             gradient: LinearGradient(colors: [Colors.black,Colors.black],begin: Alignment.topRight,end: Alignment.topLeft),
           ),
           child: SingleChildScrollView(
@@ -40,16 +41,17 @@ class _StartScreenState extends State<StartScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 200),
+                  const SizedBox(height: 30),
                   const CircleAvatar(
                     backgroundColor: Colors.white,
                     radius: 70,
-                    backgroundImage: AssetImage('assets/images/facebook.png'),
+                    backgroundImage: AssetImage('assets/icons/man.png',),
                   ),
                   Text(
                       'Let\'s get you \nStarted!',
                       textAlign: TextAlign.center,
-                      style: GoogleFonts.montserrat(color: Colors.white,
+                      style: GoogleFonts.montserrat(
+                        color: Colors.white,
                         fontSize: 30,
                         fontWeight: FontWeight.bold,)
                   ),
@@ -84,12 +86,12 @@ class _StartScreenState extends State<StartScreen> {
                           focusedBorder: OutlineInputBorder(
                             borderSide:
                             const BorderSide(color: Color(0xFF4e426f)),
-                            borderRadius: BorderRadius.circular(18),
+                            borderRadius: BorderRadius.circular(12),
                           ),
                           border: OutlineInputBorder(
                             borderSide:
                             const BorderSide(color: Color(0xFF4e426f)),
-                            borderRadius: BorderRadius.circular(18),
+                            borderRadius: BorderRadius.circular(12),
                           ),
                         ),
                       ),
@@ -103,9 +105,9 @@ class _StartScreenState extends State<StartScreen> {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         fixedSize: Size(deviceWidth, 40),
-                        backgroundColor: Colors.lightBlueAccent.shade200,
+                        backgroundColor: const Color(0xFF00A6A6),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18),
+                          borderRadius: BorderRadius.circular(12),
                         ),
                       ),
                       onPressed: () async {
@@ -124,7 +126,7 @@ class _StartScreenState extends State<StartScreen> {
                       child: Text(
                           'Get Started',
                           style: GoogleFonts.montserrat(fontSize: 15,
-                              color: Colors.black87,
+                              color: Colors.white,
                               fontWeight: FontWeight.bold)
                       ),
                     ),

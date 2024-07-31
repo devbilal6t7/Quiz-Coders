@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:quiz_coder/screens/Home/home.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:page_transition/page_transition.dart';
-import '../DashBoard Screen/home_screen.dart';
 import '../Start Screen/start_screen.dart';
 
 
