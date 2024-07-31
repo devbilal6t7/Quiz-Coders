@@ -92,7 +92,7 @@ class _NotesScreenState extends State<NotesScreen> with SingleTickerProviderStat
             Expanded(
               child: TabBarView(
                 controller: _tabController,
-                children: [
+                children: const [
                   FirstYearNotes(),
                  SecondYearNotes(),
                 ],
