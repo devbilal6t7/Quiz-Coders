@@ -67,15 +67,15 @@ class _NotesScreenState extends State<QuizScreen>
                 controller: _tabController,
                 tabs: const [
                   Tab(
-                    text: '      First Year Quiz            ',
+                    text: 'First Year Quiz',
                   ),
                   Tab(
-                    text: '      Second Year Quiz            ',
+                    text: 'Second Year Quiz',
                   ),
                 ],
                 labelColor: Colors.white,
                 dividerColor: Colors.transparent,
-                indicatorPadding: const EdgeInsets.symmetric(horizontal: -16),
+                indicatorPadding: const EdgeInsets.symmetric(horizontal: -2),
                 unselectedLabelColor: Colors.black,
                 indicator: BoxDecoration(
                   boxShadow: [

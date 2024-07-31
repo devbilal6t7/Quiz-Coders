@@ -68,7 +68,7 @@ class _NotesScreenState extends State<NotesScreen> with SingleTickerProviderStat
                 ],
                 labelColor: Colors.white,
                 dividerColor: Colors.transparent,
-                indicatorPadding: const EdgeInsets.symmetric(horizontal: -16),
+                indicatorPadding: const EdgeInsets.symmetric(horizontal: -2),
                 unselectedLabelColor: Colors.black,
                 indicator: BoxDecoration(
                   boxShadow: [
