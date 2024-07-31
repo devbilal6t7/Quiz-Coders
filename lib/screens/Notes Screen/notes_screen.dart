@@ -9,13 +9,15 @@ class NotesScreen extends StatefulWidget {
   State<NotesScreen> createState() => _NotesScreenState();
 }
 
-class _NotesScreenState extends State<NotesScreen> with SingleTickerProviderStateMixin {
-  late final TabController _tabController = TabController(length: 2, vsync: this);
+class _NotesScreenState extends State<NotesScreen>
+    with SingleTickerProviderStateMixin {
+  late final TabController _tabController =
+      TabController(length: 2, vsync: this);
 
   @override
   void initState() {
     super.initState();
-    _tabController ;
+    _tabController;
   }
 
   @override
@@ -33,17 +35,23 @@ class _NotesScreenState extends State<NotesScreen> with SingleTickerProviderStat
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 40,),
-            Text(
+            const SizedBox(
+              height: 40,
+            ),
+            const Text(
               'Notes For You',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 10,),
-            Text(
+            const SizedBox(
+              height: 10,
+            ),
+            const Text(
               'Organize your thoughts and key points here.\nAll Notes are Provided Here!',
               style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 20,),
+            const SizedBox(
+              height: 20,
+            ),
             // TabBar for button selection
             Container(
               decoration: BoxDecoration(
@@ -59,11 +67,10 @@ class _NotesScreenState extends State<NotesScreen> with SingleTickerProviderStat
                 controller: _tabController,
                 tabs: const [
                   Tab(
-                    text: '           First Year             ',
-
+                    text: 'First Year',
                   ),
                   Tab(
-                    text: '         Second Year             ',
+                    text: 'Second Year',
                   ),
                 ],
                 labelColor: Colors.white,
@@ -73,8 +80,7 @@ class _NotesScreenState extends State<NotesScreen> with SingleTickerProviderStat
                 indicator: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
-                      color: const Color.fromARGB(
-                          255, 180, 180, 180)
+                      color: const Color.fromARGB(255, 180, 180, 180)
                           .withOpacity(0.1),
                       spreadRadius: 2,
                       blurRadius: 5,
@@ -86,7 +92,9 @@ class _NotesScreenState extends State<NotesScreen> with SingleTickerProviderStat
                 ),
               ),
             ),
-            const SizedBox(height: 20,),
+            const SizedBox(
+              height: 20,
+            ),
             // TabBarView for displaying content based on selected tab
             Expanded(
               child: TabBarView(
