@@ -35,16 +35,16 @@ class _HomeState extends State<Home> {
       body: screens[currentIndex],
       bottomNavigationBar: CurvedNavigationBar(
         animationCurve: Curves.easeOut,
-        backgroundColor: Colors.transparent,
-        color:  const Color(0xFF6A5AE0),
-        buttonBackgroundColor: const Color(0xFF6A5AE0),
+        backgroundColor: const Color(0xFF6A5AE0),
+        color:  Colors.white,
+        buttonBackgroundColor:Colors.white,
         height: 60,
         animationDuration: const Duration(milliseconds: 300),
         items: const <Widget>[
-          Icon(Icons.dashboard_customize_outlined, size: 20, color: Colors.white),
-          Icon(Icons.note, size: 20, color: Colors.white),
-          Icon(Icons.quiz, size: 20, color: Colors.white),
-          Icon(Icons.chat, size: 20, color: Colors.white),
+          Icon(Icons.dashboard_customize_outlined, size: 20, color:  Color(0xFF6A5AE0)),
+          Icon(Icons.note, size: 20, color: Color(0xFF6A5AE0)),
+          Icon(Icons.quiz, size: 20, color: Color(0xFF6A5AE0)),
+          Icon(Icons.chat, size: 20, color: Color(0xFF6A5AE0)),
         ],
         onTap: (index) {
           setState(() {
