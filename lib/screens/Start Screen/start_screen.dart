@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../DashBoard Screen/home_screen.dart';
+import '../Home/home.dart';
 
 
 class StartScreen extends StatefulWidget {
@@ -50,7 +50,7 @@ class _StartScreenState extends State<StartScreen> {
                   Text(
                       'Let\'s get you \nStarted!',
                       textAlign: TextAlign.center,
-                      style: GoogleFonts.montserrat(
+                      style: TextStyle(
                         color: Colors.white,
                         fontSize: 30,
                         fontWeight: FontWeight.bold,)
@@ -67,7 +67,7 @@ class _StartScreenState extends State<StartScreen> {
                         keyboardType: TextInputType.name,
                         textCapitalization: TextCapitalization.words,
                         controller: usernameController,
-                        style: GoogleFonts.montserrat(color: Colors.black87),
+                        style: TextStyle(color: Colors.black87),
                         maxLength: 10,
                         validator: (value) {
                           if (value!.trim().isEmpty) {
@@ -80,7 +80,7 @@ class _StartScreenState extends State<StartScreen> {
                           contentPadding: const EdgeInsets.symmetric(
                               horizontal: 20, vertical: 12),
                           hintText: 'Enter Your Name',
-                          hintStyle: GoogleFonts.montserrat(color: Colors.black87,fontWeight: FontWeight.bold),
+                          hintStyle: TextStyle(color: Colors.black87,fontWeight: FontWeight.bold),
                           filled: true,
                           fillColor: Colors.white70,
                           focusedBorder: OutlineInputBorder(
@@ -117,7 +117,7 @@ class _StartScreenState extends State<StartScreen> {
                             Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => HomeScreen(
+                                    builder: (context) => Home(
                                         userName:
                                         usernameController.text.trim())));
                           }
@@ -125,7 +125,7 @@ class _StartScreenState extends State<StartScreen> {
                       },
                       child: Text(
                           'Get Started',
-                          style: GoogleFonts.montserrat(fontSize: 15,
+                          style: TextStyle(fontSize: 15,
                               color: Colors.white,
                               fontWeight: FontWeight.bold)
                       ),

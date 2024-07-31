@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:quiz_coder/colors/colors.dart';
+import 'package:quiz_coder/screens/DashBoard%20Screen/widgets/white_container_tiles.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key, required this.userName});
@@ -8,7 +9,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF6A5AE0),
+      backgroundColor: const Color(0xFF6A5AE0),
       body: Column(
         children: [
           const SizedBox(height: 50,),
@@ -41,27 +42,28 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Image.asset('assets/icons/hi.png',width: 48,height: 48,),
                   const SizedBox(width: 60,),
-                  Text('FEATURED',
-                    style: GoogleFonts.rubik(
+                  const Text('FEATURED',
+                    style: TextStyle(
+                      fontFamily: 'Rubik',
                         color: Colors.white70,
                         fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
               const SizedBox(height: 20,),
-              Center(
+              const Center(
                 child: Text(
                   'Take part in challenges with\n friends or other players',
-                  style: GoogleFonts.rubik(
+                  style: TextStyle(
+                    fontFamily: 'Montserrat',
                       color: Colors.white,
-                      fontSize: 18, fontWeight: FontWeight.normal, fontStyle: FontStyle.italic),
+                      fontSize: 18, fontWeight: FontWeight.bold),
                 ),
               ),
               const SizedBox(height: 20,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-
                   const SizedBox(width: 60,),
                   Image.asset('assets/icons/by.png',width: 55,height: 55,),
                 ],
@@ -81,9 +83,10 @@ class HomeScreen extends StatelessWidget {
           children: [
             Text(
               'Hi👋 $userName,\nLet\'s Start Preparation',
-              style: GoogleFonts.rubik(
+              style: const TextStyle(
                   color: Colors.white,
-                  fontSize: 18, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic),
+                  fontFamily: 'Montserrat',
+                  fontSize: 20, fontWeight: FontWeight.bold,),
             ),
             const CircleAvatar(
               backgroundColor: Colors.white,
@@ -111,13 +114,14 @@ class HomeScreen extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 8),
               child: Text('Don’t watch the clock!\nDo what it does, Keep going.',
-                style: GoogleFonts.montserrat(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                  color: const Color(0xFF660012),
+                style:TextStyle(
+                  fontSize: 17,
+                  fontFamily: 'Rubik',
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFF660012),
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -132,597 +136,29 @@ class HomeScreen extends StatelessWidget {
   Widget whiteContainer() {
     return SingleChildScrollView(
       child: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Colors.white,
-          borderRadius: const BorderRadius.only(
+          borderRadius: BorderRadius.only(
             topRight: Radius.circular(20),
             topLeft: Radius.circular(20),
           ),
         ),
         padding: const EdgeInsets.all(16),
-        child: Column(
+        child: const Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
-              ],
-            ),Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Your Preparation Time',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                ),
-                Text('00:00:00',
-                  style: GoogleFonts.montserrat(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: const Color(0xFF660012),
-                  ),
-                )
+                Text('Live Quizzes',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                Text('View All',style:  TextStyle(fontSize: 14,fontWeight: FontWeight.bold,color: Color(0xFF6A5AE0)),)
               ],
             ),
-            // Add more widgets here if needed
-            // Example for adding more content
-            // SizedBox(height: 20),
-            // Text('Additional content'),
+            SizedBox(height: 10,),
+            WhiteContainerTiles(),
+            SizedBox(height: 20,),
+            WhiteContainerTiles(),
+            SizedBox(height: 20,),
+            WhiteContainerTiles(),
           ],
         ),
       ),

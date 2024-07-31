@@ -24,27 +24,42 @@ class _HomeState extends State<Home> {
       HomeScreen(userName: widget.userName),
       const NotesScreen(),
       const QuizScreen(),
-      ChatBot(userName: widget.userName,),
+      ChatBot(
+        userName: widget.userName,
+      ),
     ];
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: screens[currentIndex],
       bottomNavigationBar: CurvedNavigationBar(
         animationCurve: Curves.easeOut,
         backgroundColor: const Color(0xFF6A5AE0),
-        color:  Colors.white,
-        buttonBackgroundColor:Colors.white,
         height: 60,
         animationDuration: const Duration(milliseconds: 300),
-        items: const <Widget>[
-          Icon(Icons.dashboard_customize_outlined, size: 20, color:  Color(0xFF6A5AE0)),
-          Icon(Icons.note, size: 20, color: Color(0xFF6A5AE0)),
-          Icon(Icons.quiz, size: 20, color: Color(0xFF6A5AE0)),
-          Icon(Icons.chat, size: 20, color: Color(0xFF6A5AE0)),
+        items: <Widget>[
+          Image.asset(
+            'assets/icons/dashboard.png',
+            height: 20,
+            width: 20,
+          ),
+          Image.asset(
+            'assets/icons/notes.png',
+            height: 20,
+            width: 20,
+          ),
+          Image.asset(
+            'assets/icons/quiz.png',
+            height: 20,
+            width: 20,
+          ),
+          Image.asset(
+            'assets/icons/chatbot.png',
+            height: 20,
+            width: 20,
+          ),
         ],
         onTap: (index) {
           setState(() {

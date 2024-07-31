@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 
@@ -59,7 +58,7 @@ class _ChatBotState extends State<ChatBot> {
                   children: [
                     Text(
                       'Hi👋 ${widget.userName},\nLet\'s Start Preparation',
-                      style: GoogleFonts.rubik(
+                      style: TextStyle(
                           color: Colors.white,
                           fontSize: 18, fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
                     ),
