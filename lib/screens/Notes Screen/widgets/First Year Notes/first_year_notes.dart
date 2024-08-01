@@ -25,7 +25,7 @@ class FirstYearNotes extends StatelessWidget {
               ),
               CardWidget(
                 title: 'Math',
-                imageAddress: 'assets/images/maths.png',
+                imageAddress: 'assets/icons/math_note.png',
                 onTap: () {},
               ),
               const SizedBox(
@@ -33,7 +33,7 @@ class FirstYearNotes extends StatelessWidget {
               ),
               CardWidget(
                 title: 'Biology',
-                imageAddress: 'assets/images/lab.png',
+                imageAddress: 'assets/icons/biology_note.png',
                 onTap: () {},
               ),
               const SizedBox(
@@ -41,7 +41,7 @@ class FirstYearNotes extends StatelessWidget {
               ),
               CardWidget(
                 title: 'Chemistry',
-                imageAddress: 'assets/images/chemistry.png',
+                imageAddress: 'assets/icons/chemistry_note.png',
                 onTap: () {},
               ),
               const SizedBox(
@@ -49,7 +49,7 @@ class FirstYearNotes extends StatelessWidget {
               ),
               CardWidget(
                 title: 'Physics',
-                imageAddress: 'assets/images/physics.png',
+                imageAddress: 'assets/icons/physics_note.png',
                 onTap: () {},
               ),
             ]),
