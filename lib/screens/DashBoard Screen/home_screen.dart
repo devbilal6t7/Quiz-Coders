@@ -12,14 +12,14 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: const Color(0xFF6A5AE0),
       body: Column(
         children: [
-          const SizedBox(height: 50,),
+          const SizedBox(height: 40,),
           buildAppBar(),
-          const SizedBox(height: 20,),
+          const SizedBox(height: 10,),
           quoteClock(),
-          const SizedBox(height: 20,),
-          emptyContainer(),
-          const SizedBox(height: 20,),
-          Expanded(child: whiteContainer()), // Use Expanded to allow whiteContainer to scroll
+          const SizedBox(height: 10,),
+          Expanded(
+
+              child: whiteContainer()), // Use Expanded to allow whiteContainer to scroll
         ],
       ),
     );
@@ -136,6 +136,7 @@ class HomeScreen extends StatelessWidget {
   Widget whiteContainer() {
     return SingleChildScrollView(
       child: Container(
+        height: 700,
         decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
@@ -144,21 +145,25 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         padding: const EdgeInsets.all(16),
-        child: const Column(
+        child:  Column(
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Live Quizzes',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                Text('Random Quiz',style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
                 Text('View All',style:  TextStyle(fontSize: 14,fontWeight: FontWeight.bold,color: Color(0xFF6A5AE0)),)
               ],
             ),
             SizedBox(height: 10,),
-            WhiteContainerTiles(),
+            WhiteContainerTiles(title: 'Math',subtitle: 'Have Fun With Math', imageAddress: 'assets/icons/math_random.png', onTap: () {  },),
             SizedBox(height: 20,),
-            WhiteContainerTiles(),
+            WhiteContainerTiles(title: 'Physics',subtitle: 'Have Fun With Physics', imageAddress: 'assets/icons/physics_random.png', onTap: () {  },),
             SizedBox(height: 20,),
-            WhiteContainerTiles(),
+            WhiteContainerTiles(title: 'Chemistry',subtitle: 'Have Fun With Chemistry', imageAddress: 'assets/icons/chemistry_random.png', onTap: () {  },),
+            SizedBox(height: 20,),
+            WhiteContainerTiles(title: 'Biology',subtitle: 'Have Fun With Biology', imageAddress: 'assets/icons/biology_random.png', onTap: () {  },),
+
+
           ],
         ),
       ),
