@@ -53,43 +53,32 @@ class _NotesScreenState extends State<NotesScreen>
               height: 20,
             ),
             // TabBar for button selection
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                border: const Border(
-                  left: BorderSide(color: Color(0xFF6A5AE0)),
-                  top: BorderSide(color: Color(0xFF6A5AE0)),
-                  right: BorderSide(color: Color(0xFF6A5AE0)),
-                  bottom: BorderSide(color: Color(0xFF6A5AE0)),
+            TabBar(
+              controller: _tabController,
+              tabs: const [
+                Tab(
+                  text: 'First Year',
                 ),
-              ),
-              child: TabBar(
-                controller: _tabController,
-                tabs: const [
-                  Tab(
-                    text: 'First Year',
-                  ),
-                  Tab(
-                    text: 'Second Year',
+                Tab(
+                  text: 'Second Year',
+                ),
+              ],
+              labelColor: Colors.white,
+              dividerColor: Colors.transparent,
+              indicatorPadding: EdgeInsets.symmetric(horizontal: -45),
+              unselectedLabelColor: Colors.black,
+              indicator: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color.fromARGB(255, 180, 180, 180)
+                        .withOpacity(0.1),
+                    spreadRadius: 2,
+                    blurRadius: 5,
+                    offset: const Offset(0, 3),
                   ),
                 ],
-                labelColor: Colors.white,
-                dividerColor: Colors.transparent,
-                indicatorPadding: const EdgeInsets.symmetric(horizontal: -2),
-                unselectedLabelColor: Colors.black,
-                indicator: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: const Color.fromARGB(255, 180, 180, 180)
-                          .withOpacity(0.1),
-                      spreadRadius: 2,
-                      blurRadius: 5,
-                      offset: const Offset(0, 3),
-                    ),
-                  ],
-                  color: const Color(0xFF6A5AE0),
-                  borderRadius: BorderRadius.circular(8),
-                ),
+                color: const Color(0xFF6A5AE0),
+                borderRadius: BorderRadius.circular(8),
               ),
             ),
             const SizedBox(

@@ -75,7 +75,7 @@ class _OnBoardingState extends State<OnBoarding> {
             width: double.infinity,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: AppColor.appcolor,
+                backgroundColor: AppColor.appColor,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(11),
                 ),
@@ -115,7 +115,7 @@ class _OnBoardingState extends State<OnBoarding> {
       margin: const EdgeInsets.only(right: 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: currentIndex == index ? AppColor.appcolor : Colors.grey,
+        color: currentIndex == index ? AppColor.appColor : Colors.grey,
       ),
     );
   }
