@@ -13,7 +13,7 @@ class FirstYearNotes extends StatelessWidget {
       height: 500,
       width: double.infinity,
       decoration: const BoxDecoration(
-          color: AppColor.appcolor,
+          color: AppColor.appColor,
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(12), topRight: Radius.circular(12))),
       child: Padding(
