@@ -19,15 +19,15 @@ class CardWidget extends StatelessWidget {
             onTap: onTap,
             leading: CircleAvatar(
                 radius: 30,
-                backgroundColor: AppColor.appcolor,
+                backgroundColor: AppColor.appColor,
                 child: Image.asset(imageAddress,height: 40,width: 40,)),
             title:  Text(
               title,
-              style: TextStyle(fontSize: 21, fontFamily: 'Rubik',fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 21, fontFamily: 'Rubik',fontWeight: FontWeight.bold),
             ),
             trailing: const Icon(
               Icons.navigate_next,
-              color: AppColor.appcolor,
+              color: AppColor.appColor,
               size: 36,
             ),
           ),

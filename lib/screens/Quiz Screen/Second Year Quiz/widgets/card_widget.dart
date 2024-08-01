@@ -19,7 +19,7 @@ class CardWidgets extends StatelessWidget {
             onTap: onTap,
             leading: CircleAvatar(
                 radius: 30,
-                backgroundColor: AppColor.appcolor,
+                backgroundColor: AppColor.appColor,
                 child: Image.asset(imageAddress,height: 40,width: 40,)),
             title:  Text(
               title,
@@ -27,7 +27,7 @@ class CardWidgets extends StatelessWidget {
             ),
             trailing: const Icon(
               Icons.navigate_next,
-              color: AppColor.appcolor,
+              color: AppColor.appColor,
               size: 36,
             ),
           ),

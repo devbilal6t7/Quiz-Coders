@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../colors/colors.dart';
 import '../DashBoard Screen/home_screen.dart';
 import '../Home/home.dart';
 
@@ -105,7 +106,7 @@ class _StartScreenState extends State<StartScreen> {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         fixedSize: Size(deviceWidth, 40),
-                        backgroundColor: const Color(0xFF00A6A6),
+                        backgroundColor: AppColor.appColor,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),

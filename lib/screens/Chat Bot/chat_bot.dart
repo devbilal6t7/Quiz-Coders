@@ -57,7 +57,7 @@ class _ChatBotState extends State<ChatBot> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text(
-                      'Hi👋 ${widget.userName},\nLet\'s Start Preparation',
+                      'Hey!👋 ${widget.userName},\nAsk me Anything',
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 18, fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),
@@ -89,6 +89,7 @@ class _ChatBotState extends State<ChatBot> {
                   Expanded(
                     flex: 15,
                     child: TextFormField(
+
                       style: const TextStyle(color: Colors.black),
                       controller: _userInput,
                       decoration: InputDecoration(

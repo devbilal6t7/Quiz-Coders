@@ -12,7 +12,7 @@ class QuizScreen extends StatefulWidget {
 class _NotesScreenState extends State<QuizScreen>
     with SingleTickerProviderStateMixin {
   late final TabController _tabController =
-      TabController(length: 2, vsync: this);
+  TabController(length: 2, vsync: this);
 
   @override
   void initState() {
@@ -53,43 +53,32 @@ class _NotesScreenState extends State<QuizScreen>
               height: 20,
             ),
             // TabBar for button selection
-            Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                border: const Border(
-                  left: BorderSide(color: Color(0xFF6A5AE0)),
-                  top: BorderSide(color: Color(0xFF6A5AE0)),
-                  right: BorderSide(color: Color(0xFF6A5AE0)),
-                  bottom: BorderSide(color: Color(0xFF6A5AE0)),
+            TabBar(
+              controller: _tabController,
+              tabs: const [
+                Tab(
+                  text: 'First Year Quiz',
                 ),
-              ),
-              child: TabBar(
-                controller: _tabController,
-                tabs: const [
-                  Tab(
-                    text: 'First Year Quiz',
-                  ),
-                  Tab(
-                    text: 'Second Year Quiz',
+                Tab(
+                  text: 'Second Year Quiz',
+                ),
+              ],
+              labelColor: Colors.white,
+              dividerColor: Colors.transparent,
+              indicatorPadding: const EdgeInsets.symmetric(horizontal: -16),
+              unselectedLabelColor: Colors.black,
+              indicator: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color.fromARGB(255, 180, 180, 180)
+                        .withOpacity(0.1),
+                    spreadRadius: 2,
+                    blurRadius: 5,
+                    offset: const Offset(0, 3),
                   ),
                 ],
-                labelColor: Colors.white,
-                dividerColor: Colors.transparent,
-                indicatorPadding: const EdgeInsets.symmetric(horizontal: -2),
-                unselectedLabelColor: Colors.black,
-                indicator: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: const Color.fromARGB(255, 180, 180, 180)
-                          .withOpacity(0.1),
-                      spreadRadius: 2,
-                      blurRadius: 5,
-                      offset: const Offset(0, 3),
-                    ),
-                  ],
-                  color: const Color(0xFF6A5AE0),
-                  borderRadius: BorderRadius.circular(8),
-                ),
+                color: const Color(0xFF6A5AE0),
+                borderRadius: BorderRadius.circular(8),
               ),
             ),
             const SizedBox(
