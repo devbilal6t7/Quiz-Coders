@@ -2,10 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:quiz_coder/colors/colors.dart';
 import 'package:quiz_coder/screens/DashBoard%20Screen/widgets/white_container_tiles.dart';
 
-class HomeScreen extends StatelessWidget {
+import '../Random Quizzes/random_quizzes.dart';
+
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key, required this.userName});
   final String userName;
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,6 +31,7 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
+
   Widget emptyContainer(){
     return Padding(
       padding: const EdgeInsets.all(8.0),
@@ -74,6 +82,7 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
+
   Widget buildAppBar() {
     return Center(
       child: Container(
@@ -82,7 +91,7 @@ class HomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Text(
-              'Hi👋 $userName,\nLet\'s Start Preparation',
+              'Hi👋 ${widget.userName},\nLet\'s Start Preparation',
               style: const TextStyle(
                   color: Colors.white,
                   fontFamily: 'Montserrat',
@@ -155,7 +164,9 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: 10,),
-            WhiteContainerTiles(title: 'Math',subtitle: 'Have Fun With Math', imageAddress: 'assets/icons/math_random.png', onTap: () {  },),
+            WhiteContainerTiles(title: 'Math',subtitle: 'Have Fun With Math', imageAddress: 'assets/icons/math_random.png', onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (_)=> RandomQuizzes()));
+            },),
             SizedBox(height: 20,),
             WhiteContainerTiles(title: 'Physics',subtitle: 'Have Fun With Physics', imageAddress: 'assets/icons/physics_random.png', onTap: () {  },),
             SizedBox(height: 20,),

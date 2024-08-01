@@ -89,16 +89,17 @@ class _ChatBotState extends State<ChatBot> {
                   Expanded(
                     flex: 15,
                     child: TextFormField(
-
                       style: const TextStyle(color: Colors.black),
                       controller: _userInput,
                       decoration: InputDecoration(
+                        fillColor: Colors.white,
+                        filled: true,
                         border: OutlineInputBorder(
-                          borderSide: const BorderSide(color: Colors.white,width: 3),
+                          borderSide: const BorderSide(color: Colors.black,width: 3),
                           borderRadius: BorderRadius.circular(15),
                         ),
                         hintText: 'Enter Your Message',
-                        hintStyle: const TextStyle(color: Colors.white),
+                        hintStyle: const TextStyle(color: Colors.black),
                       ),
                     ),
                   ),
